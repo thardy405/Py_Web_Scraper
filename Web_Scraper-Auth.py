@@ -1,5 +1,4 @@
-#
-# import requests
+import requests
 import getpass
 # from bs4 import BeautifulSoup
 
@@ -14,10 +13,10 @@ login_data = {
 	'password': 'mypass'
 }
 
-# url = 'https://oidc.idp.elogin.att.com/mga/sps/authsvc?PolicyId=urn:ibm:security:authentication:asf:pass'
-# s = requests.Session()
-# data = s.get(url, headers = header)
+url = 'https://oidc.idp.elogin.att.com/mga/sps/authsvc?PolicyId=urn:ibm:security:authentication:asf:pass'
+s = requests.Session()
+data = s.get(url, headers = header)
 
-# print(data)
-print(login_data)
-# s.close()
+print(data.content)
+# print(login_data)
+s.close()
